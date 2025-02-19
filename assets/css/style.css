@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(47, 88%, 63%);
+  min-height: calc(100vh - 20px);
+  display: grid;
+  place-content: center;
+  gap: 15px;
+}
+
+/* Começar com mobile first */
+
+.card-component {
+  box-sizing: border-box;
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px black solid;
+  box-shadow: black 8px 8px; /*Primeiro valor y, segundo valor x, terceiro blur */
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  margin: auto;
+  min-height: 501px;
+  width: 87.2%;
+  max-width: 380px;
+  background-color: white;
+  gap: 24px;
+}
+
+.main-image {
+  width: 100%;
+}
+
+.back-image {
+  margin: 0 auto;
+  display: block;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.category-learning {
+  display: block;
+  box-sizing: border-box;
+  padding: 4px 0px 4px 0px;
+  width: 73px;
+  height: 26px;
+  background-color: hsl(47, 88%, 63%);
+  font-family: Figtree ExtraBold;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+  border-radius: 4px;
+  color: hsl(0, 0%, 7%);
+}
+
+.date-post {
+  display: block;
+  font-family: Figtree Medium;
+  font-size: 14px;
+  line-height: 150%;
+  color: hsl(0, 0%, 7%);
+}
+
+.content > h1 {
+  font-family: Figtree Extrabold;
+  color: hsl(0, 0%, 7%);
+  font-size: 20px;
+  line-height: 150%;
+  transition: 150ms ease-out;
+}
+
+.content > p {
+  font-family: Figtree Medium;
+  font-size: 14px;
+  line-height: 150%;
+  color: hsl(0, 0%, 42%);
+}
+
+.author-content > img {
+  width: 32px;
+}
+
+.author-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: hsl(0, 0%, 7%);
+  font-family: Figtree Extrabold;
+  line-height: 150%;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 1279px) {
+  .content > h1:active {
+    color: hsl(47, 88%, 63%);
+  }
+}
+
+/* Desktop version  */
+
+@media only screen and (min-width: 1280px) {
+  .card-component {
+    min-height: 522px;
+    width: 26.6vw;
+  }
+  .category-learning {
+    width: 82px;
+    height: 29px;
+    font-size: 14px;
+  }
+
+  .content > h1 {
+    font-size: 24px;
+    transition: 150ms ease-out;
+  }
+
+  .content > h1:hover {
+    color: hsl(47, 88%, 63%);
+    cursor: pointer;
+  }
+
+  .content > p {
+    font-size: 16px;
+  }
+}
+
+/* Import fonts */
+
+@font-face {
+  font-family: Figtree ExtraBold;
+  src: url(../fonts/static/Figtree-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: Figtree Medium;
+  src: url(../fonts/static/Figtree-Medium.ttf);
+}
